@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/hello-world.dir/hello-world.cpp.o -o hello-world  libmessage.a 
