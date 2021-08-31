@@ -1,4 +1,0 @@
-/home/yusheng/repos/CMakeTutorials/#2 构建和链接静态库和动态库/CMakeFiles/rebuild_cache.dir
-/home/yusheng/repos/CMakeTutorials/#2 构建和链接静态库和动态库/CMakeFiles/edit_cache.dir
-/home/yusheng/repos/CMakeTutorials/#2 构建和链接静态库和动态库/CMakeFiles/hello-world.dir
-/home/yusheng/repos/CMakeTutorials/#2 构建和链接静态库和动态库/CMakeFiles/message.dir
