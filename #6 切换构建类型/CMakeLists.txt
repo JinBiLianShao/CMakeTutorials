@@ -6,7 +6,7 @@ if (NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
 endif()
 
-option(ADD_LIBRARY OFF)
+option(USE_LIBRARY OFF)
 
 list(APPEND _sources Message.h Message.cpp)
 
@@ -20,7 +20,7 @@ message(STATUS "##### C++ flags, Release configuration:                 ${CMAKE_
 message(STATUS "##### C++ flags, Release configuration with Debug info: ${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
 message(STATUS "##### C++ flags, minimal Release configuration:         ${CMAKE_CXX_FLAGS_MINSIZEREL}")
 
-if (ADD_LIBRARY)
+if (USE_LIBRARY)
     add_library(message ${_sources})
     add_executable(hello-world hello-world.cpp)
     target_link_libraries(hello-world message)

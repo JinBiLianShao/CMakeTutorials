@@ -121,7 +121,7 @@ CMakeCache.txt  CMakeFiles  Makefile  cmake_install.cmake  hello-world.exe
 
 ``` shell
 # 同时构建 Release 和 静态库
-$ cmake -D CMAKE_BUILD_TYPE=Release -D ADD_LIBRARY=ON ..
+$ cmake -D CMAKE_BUILD_TYPE=Release -D USE_LIBRARY=ON ..
 
 -- The CXX compiler identification is GNU 10.2.0
 -- Detecting CXX compiler ABI info
