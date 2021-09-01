@@ -78,5 +78,21 @@
    target_link_libraries(hello-cmake message)
    ```
 
-   
+#### 如何工作
 
+---
+
+``` cmake
+# 本例中，警告标志有 -Wall 、 -Wextra 和 -Wpedantic ，将这些标示添加到 geometry 目标的编译选项中； compute-areas 和 geometry 目标都将使用 -fPIC 标志。
+# 编译选项可以添加三个级别的可见性：INTERFACE、PUBLIC 和 PRIVATE 。
+# 可见性的含义如下:
+
+# PRIVATE，编译选项会应用于给定的目标，不会传递给与目标相关的目标。
+# 我们的示例中， 即使 compute-areas 将链接到 geometry 库， compute-areas 也不会继承 geometry 目标上设置的编译器选项。
+
+# INTERFACE，给定的编译选项将只应用于指定目标，并传递给与目标相关的目标。
+
+# PUBLIC，编译选项将应用于指定目标和使用它的目标。
+# 目标属性的可见性 CMake 的核心，我们将在本书中经常讨论这个话题。
+# 以这种方式添加编译选项，不会影响全局CMake变量 CMAKE_<LANG>_FLAGS_<CONFIG> ，并能更细粒度控制在哪些目标上使用哪些选项。
+```
