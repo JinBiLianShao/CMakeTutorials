@@ -66,4 +66,14 @@
    target_link_libraries(download progressbar)
    ```
 
-   
+#### 工作原理
+
+- CXX_STANDARD 会设置我们想要的标准。
+
+- CXX_EXTENSIONS 告诉 CMake，只启用 ISO C++ 标准的编译器标志，而不使用特定编译器的扩展。
+
+- CXX_STANDARD_REQUIRED 指定所选标准的版本。如果这个版本不可用，CMake将停止配置并出现错误。
+
+  当这个属性被设置为 OFF 时，CMake将寻找下一个标准的最新版本，直到一个合适的标志。
+
+  这意味着，首先查找 C++14 ，然后是 C++11 ，然后是 C++98 。
