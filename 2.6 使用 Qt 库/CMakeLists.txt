@@ -16,7 +16,7 @@ if (NOT CMAKE_BUILD_TYPE)
 	set(CMAKE_BUILD_TYPE Release)
 endif()
 
-find_package(Qt5 COMPONENTS Core)
+find_package(Qt5 REQUIRED Core)
 
 add_executable(${PROJECT_NAME} ${PROJECT_NAME}.cpp)
 
